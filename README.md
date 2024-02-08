@@ -1,112 +1,84 @@
-# Point Cloud Library
-
-<p align="center"><img src="pcl.png" height="100"></p>
-
-[![Release][release-image]][releases]
-[![License][license-image]][license]
-
-[release-image]: https://img.shields.io/badge/release-1.14.0-green.svg?style=flat
-[releases]: https://github.com/PointCloudLibrary/pcl/releases
-
-[license-image]: https://img.shields.io/badge/license-BSD-green.svg?style=flat
-[license]: https://github.com/PointCloudLibrary/pcl/blob/master/LICENSE.txt
-
-Website
--------
-
-The new website is now online at https://pointclouds.org and is open to [contributions](https://github.com/PointCloudLibrary/PointCloudLibrary.github.io) :hammer_and_wrench:.
-
-If you really need access to the old website, please use [the copy made by the internet archive](https://web.archive.org/web/20191017164724/http://www.pointclouds.org/). Please be aware that the website was hacked before and could still be hosting some malicious code.
-
-Continuous integration
-----------------------
-[ci-latest-build]: https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&branchName=master
-[ci-ubuntu-20.04]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20GCC&jobName=Ubuntu&configuration=Ubuntu%2020.04%20GCC&label=Ubuntu%2020.04%20GCC
-[ci-ubuntu-22.04]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20Clang&jobName=Ubuntu&configuration=Ubuntu%2022.04%20Clang&label=Ubuntu%2022.04%20Clang
-[ci-ubuntu-23.04]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20GCC&jobName=Ubuntu&configuration=Ubuntu%2023.04%20GCC&label=Ubuntu%2023.04%20GCC
-[ci-windows-x86]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20MSVC&jobName=Windows%20Build&configuration=Windows%20Build%20x86&label=Windows%20VS2019%20x86
-[ci-windows-x64]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20MSVC&jobName=Windows%20Build&configuration=Windows%20Build%20x64&label=Windows%20VS2019%20x64
-[ci-macos-12]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20Clang&jobName=macOS&configuration=macOS%20Monterey%2012&label=macOS%20Monterey%2012
-[ci-macos-13]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&stageName=Build%20Clang&jobName=macOS&configuration=macOS%20Ventura%2013&label=macOS%20Ventura%2013
-[ci-docs]: https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/Documentation?branchName=master
-[ci-latest-docs]: https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=14&branchName=master
-
-Build Platform           | Status
------------------------- | ------------------------------------------------------------------------------------------------- |
-Ubuntu                   | [![Status][ci-ubuntu-20.04]][ci-latest-build] <br> [![Status][ci-ubuntu-22.04]][ci-latest-build] <br> [![Status][ci-ubuntu-23.04]][ci-latest-build] |
-Windows                  | [![Status][ci-windows-x86]][ci-latest-build]  <br> [![Status][ci-windows-x64]][ci-latest-build]   |
-macOS                    | [![Status][ci-macos-12]][ci-latest-build]  <br> [![Status][ci-macos-13]][ci-latest-build]   |
-Documentation            | [![Status][ci-docs]][ci-latest-docs] |
-Read the Docs            | [![Documentation Status](https://readthedocs.org/projects/pcl-tutorials/badge/?version=master)](https://pcl.readthedocs.io/projects/tutorials/en/master/?badge=master) |
-
-Community
----------
-[![Discord][discord-image]][discord-server]
-[![StackOverflow][so-question-count]][stackoverflow]
-[![Website][website-status]][website]
-
-
-[discord-image]: https://img.shields.io/discord/694824801977630762?color=7289da&label=community%20chat&logo=discord&style=plastic
-[discord-server]: https://discord.gg/JFFMAXS
-[website-status]: https://img.shields.io/website/https/pointcloudlibrary.github.io.svg?down_color=red&down_message=is%20down&up_color=green&up_message=is%20new
-[website]: https://pointclouds.org/
-
-[so-question-count]: https://img.shields.io/stackexchange/stackoverflow/t/point-cloud-library.svg?logo=stackoverflow
-[stackoverflow]: https://stackoverflow.com/questions/tagged/point-cloud-library
-
-Distribution
----------
-[![Packaging status](https://repology.org/badge/tiny-repos/pcl-pointclouds.svg)](https://repology.org/project/pcl-pointclouds/badges)
-[![latest packaged version(s)](https://repology.org/badge/latest-versions/pcl-pointclouds.svg)](https://repology.org/project/pcl-pointclouds/versions)
-
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-point-cloud-library" class="anchor" aria-hidden="true" tabindex="-1" href="#point-cloud-library"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">点云库</font></font></h1>
+<p align="center" dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PointCloudLibrary/pcl/blob/master/pcl.png"><img src="/PointCloudLibrary/pcl/raw/master/pcl.png" height="100" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://github.com/PointCloudLibrary/pcl/releases"><img src="https://camo.githubusercontent.com/50cd65e8a85cfdd079a8c2b6190e2d6e0a7dc447e6093b34da7cd10d62e6ba7d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656c656173652d312e31342e302d677265656e2e7376673f7374796c653d666c6174" alt="发布" data-canonical-src="https://img.shields.io/badge/release-1.14.0-green.svg?style=flat" style="max-width: 100%;"></a>
+<a href="https://github.com/PointCloudLibrary/pcl/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/43a1267b65d39d209cb9a181ea3f4a537ecb4e73b49eaa066a1bf8634ede678a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4253442d677265656e2e7376673f7374796c653d666c6174" alt="执照" data-canonical-src="https://img.shields.io/badge/license-BSD-green.svg?style=flat" style="max-width: 100%;"></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-website" class="anchor" aria-hidden="true" tabindex="-1" href="#website"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">新网站现已上线</font></font><a href="https://pointclouds.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://pointclouds.org</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">并开放</font></font><a href="https://github.com/PointCloudLibrary/PointCloudLibrary.github.io"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">供稿</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🛠️。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您确实需要访问旧网站，请使用</font></font><a href="https://web.archive.org/web/20191017164724/http://www.pointclouds.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">互联网档案馆制作的副本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">请注意，该网站之前曾遭到黑客攻击，并且仍然可能托管一些恶意代码。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-continuous-integration" class="anchor" aria-hidden="true" tabindex="-1" href="#continuous-integration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">持续集成</font></font></h2>
+<table>
+<thead>
+<tr>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搭建平台</font></font></th>
+<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">地位</font></font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乌班图</font></font></td>
+<td><a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/99cda9db913ec1875981ebc407b8623e7945da562f60ea4d1bd7fbd0cf3c46e3/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c64253230474343266a6f624e616d653d5562756e747526636f6e66696775726174696f6e3d5562756e747525323032302e3034253230474343266c6162656c3d5562756e747525323032302e3034253230474343" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20GCC&amp;jobName=Ubuntu&amp;configuration=Ubuntu%2020.04%20GCC&amp;label=Ubuntu%2020.04%20GCC" style="max-width: 100%;"></a> <br> <a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/8e13bb87d793ac0f0d43b08888631eb5baab432c940246d43d77d77a296a4fa0/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c64253230436c616e67266a6f624e616d653d5562756e747526636f6e66696775726174696f6e3d5562756e747525323032322e3034253230436c616e67266c6162656c3d5562756e747525323032322e3034253230436c616e67" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20Clang&amp;jobName=Ubuntu&amp;configuration=Ubuntu%2022.04%20Clang&amp;label=Ubuntu%2022.04%20Clang" style="max-width: 100%;"></a> <br> <a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/ef1fbad1e04d80c1d6930a9320c44d4e2e935a0e568be457b48359362819ccba/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c64253230474343266a6f624e616d653d5562756e747526636f6e66696775726174696f6e3d5562756e747525323032332e3034253230474343266c6162656c3d5562756e747525323032332e3034253230474343" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20GCC&amp;jobName=Ubuntu&amp;configuration=Ubuntu%2023.04%20GCC&amp;label=Ubuntu%2023.04%20GCC" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">视窗</font></font></td>
+<td><a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/537efef01c806508c5594bb24d263c83fbab2f181cb1d0a9d33c587a6953a80a/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c642532304d535643266a6f624e616d653d57696e646f77732532304275696c6426636f6e66696775726174696f6e3d57696e646f77732532304275696c64253230783836266c6162656c3d57696e646f7773253230565332303139253230783836" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20MSVC&amp;jobName=Windows%20Build&amp;configuration=Windows%20Build%20x86&amp;label=Windows%20VS2019%20x86" style="max-width: 100%;"></a>  <br> <a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/7f999860779070f9c8c921489cdde15d1e64c5c3315b8034754c3e75d6aaeceb/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c642532304d535643266a6f624e616d653d57696e646f77732532304275696c6426636f6e66696775726174696f6e3d57696e646f77732532304275696c64253230783634266c6162656c3d57696e646f7773253230565332303139253230783634" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20MSVC&amp;jobName=Windows%20Build&amp;configuration=Windows%20Build%20x64&amp;label=Windows%20VS2019%20x64" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">苹果系统</font></font></td>
+<td><a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/6b4d7f6f841999f8b55e9acf3cd29f6091759f3989c6e528036a8f6b7e4cf009/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c64253230436c616e67266a6f624e616d653d6d61634f5326636f6e66696775726174696f6e3d6d61634f532532304d6f6e74657265792532303132266c6162656c3d6d61634f532532304d6f6e74657265792532303132" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20Clang&amp;jobName=macOS&amp;configuration=macOS%20Monterey%2012&amp;label=macOS%20Monterey%2012" style="max-width: 100%;"></a>  <br> <a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=9&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/54ba68edadd622ce59c047e4390769674338277b85cd073fc50610d1179ff630/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f393f6272616e63684e616d653d6d61737465722673746167654e616d653d4275696c64253230436c616e67266a6f624e616d653d6d61634f5326636f6e66696775726174696f6e3d6d61634f5325323056656e747572612532303133266c6162656c3d6d61634f5325323056656e747572612532303133" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/9?branchName=master&amp;stageName=Build%20Clang&amp;jobName=macOS&amp;configuration=macOS%20Ventura%2013&amp;label=macOS%20Ventura%2013" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></td>
+<td><a href="https://dev.azure.com/PointCloudLibrary/pcl/_build/latest?definitionId=14&amp;branchName=master" rel="nofollow"><img src="https://camo.githubusercontent.com/a63f546a792c4f9d5e55af0b895a4fdc2446990e9504fb8e4336d9a07007b337/68747470733a2f2f6465762e617a7572652e636f6d2f506f696e74436c6f75644c6962726172792f70636c2f5f617069732f6275696c642f7374617475732f446f63756d656e746174696f6e3f6272616e63684e616d653d6d6173746572" alt="地位" data-canonical-src="https://dev.azure.com/PointCloudLibrary/pcl/_apis/build/status/Documentation?branchName=master" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阅读文档</font></font></td>
+<td><a href="https://pcl.readthedocs.io/projects/tutorials/en/master/?badge=master" rel="nofollow"><img src="https://camo.githubusercontent.com/f1e6c9924af41d6ef41afdd6324d26f88c21234fce78e1ad42ffe51931be1207/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f70636c2d7475746f7269616c732f62616467652f3f76657273696f6e3d6d6173746572" alt="文件状态" data-canonical-src="https://readthedocs.org/projects/pcl-tutorials/badge/?version=master" style="max-width: 100%;"></a></td>
+</tr>
+</tbody>
+</table>
+<h2 tabindex="-1" dir="auto"><a id="user-content-community" class="anchor" aria-hidden="true" tabindex="-1" href="#community"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></h2>
+<p dir="auto"><a href="https://discord.gg/JFFMAXS" rel="nofollow"><img src="https://camo.githubusercontent.com/b2ccaaf793303b25dcd758e7b9d0a8fc0f5bef14c3c2d21e6967aedff0ae5808/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f3639343832343830313937373633303736323f636f6c6f723d373238396461266c6162656c3d636f6d6d756e69747925323063686174266c6f676f3d646973636f7264267374796c653d706c6173746963" alt="不和谐" data-canonical-src="https://img.shields.io/discord/694824801977630762?color=7289da&amp;label=community%20chat&amp;logo=discord&amp;style=plastic" style="max-width: 100%;"></a>
+<a href="https://stackoverflow.com/questions/tagged/point-cloud-library" rel="nofollow"><img src="https://camo.githubusercontent.com/0d6e100324d9eccd7b84e965b2f31c6a3d01d6cc757aa7c053be83ddbf02609f/68747470733a2f2f696d672e736869656c64732e696f2f737461636b65786368616e67652f737461636b6f766572666c6f772f742f706f696e742d636c6f75642d6c6962726172792e7376673f6c6f676f3d737461636b6f766572666c6f77" alt="堆栈溢出" data-canonical-src="https://img.shields.io/stackexchange/stackoverflow/t/point-cloud-library.svg?logo=stackoverflow" style="max-width: 100%;"></a>
+<a href="https://pointclouds.org/" rel="nofollow"><img src="https://camo.githubusercontent.com/c73f8ae1a82c6360bf5226630c6d9ef70198bc45ba4a63d41677d5e0ac6846af/68747470733a2f2f696d672e736869656c64732e696f2f776562736974652f68747470732f706f696e74636c6f75646c6962726172792e6769746875622e696f2e7376673f646f776e5f636f6c6f723d72656426646f776e5f6d6573736167653d6973253230646f776e2675705f636f6c6f723d677265656e2675705f6d6573736167653d69732532306e6577" alt="网站" data-canonical-src="https://img.shields.io/website/https/pointcloudlibrary.github.io.svg?down_color=red&amp;down_message=is%20down&amp;up_color=green&amp;up_message=is%20new" style="max-width: 100%;"></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-distribution" class="anchor" aria-hidden="true" tabindex="-1" href="#distribution"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分配</font></font></h2>
+<p dir="auto"><a href="https://repology.org/project/pcl-pointclouds/badges" rel="nofollow"><img src="https://camo.githubusercontent.com/aca6281dad8b7ef4f823452d171f94b99a6a458553fe4fbed50940d7d60ee91c/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f74696e792d7265706f732f70636c2d706f696e74636c6f7564732e737667" alt="包装状态" data-canonical-src="https://repology.org/badge/tiny-repos/pcl-pointclouds.svg" style="max-width: 100%;"></a>
+<a href="https://repology.org/project/pcl-pointclouds/versions" rel="nofollow"><img src="https://camo.githubusercontent.com/8bb8f6d96a4d6c398ac7e55e10f210683ef78d263312e1745da2dee8eb3b3c10/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f6c61746573742d76657273696f6e732f70636c2d706f696e74636c6f7564732e737667" alt="最新的打包版本" data-canonical-src="https://repology.org/badge/latest-versions/pcl-pointclouds.svg" style="max-width: 100%;"></a></p>
 <details>
-<summary>Click to see all</summary>
-<p>
-<a href="https://repology.org/project/pcl-pointclouds/packages">
-    <img src="https://repology.org/badge/vertical-allrepos/pcl-pointclouds.svg?columns=3"
-         alt="Packaging status">
+<summary><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">点击查看全部</font></font></summary>
+<p dir="auto">
+<a href="https://repology.org/project/pcl-pointclouds/packages" rel="nofollow">
+    <img src="https://camo.githubusercontent.com/5211f05f4f7278518ea414055907c0fc04b353ed52f14719955f371aa157e3ef/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f766572746963616c2d616c6c7265706f732f70636c2d706f696e74636c6f7564732e7376673f636f6c756d6e733d33" alt="包装状态" data-canonical-src="https://repology.org/badge/vertical-allrepos/pcl-pointclouds.svg?columns=3" style="max-width: 100%;">
 </a>
 </p>
 </details>
-
-Description
------------
-The Point Cloud Library (PCL) is a standalone, large scale, open project for 2D/3D image and point cloud processing.
-
-PCL is released under the terms of the BSD license, and thus free for commercial and research use. We are financially supported by a consortium of commercial companies, with our own non-profit organization, Open Perception. We would also like to thank individual donors and contributors that have been helping the project.
-
-Compiling
----------
-Please refer to the platform specific tutorials:
- - [Linux](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_posix.html)
- - [Mac OS X](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_macosx.html)
- - [Microsoft Windows](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_windows.html)
-
-Documentation
--------------
-- [Tutorials](https://pcl-tutorials.readthedocs.io/)
-- [PCL trunk documentation](https://pointclouds.org/documentation/)
-
-Contributing
-------------
-Please read [CONTRIBUTING.md](https://github.com/PointCloudLibrary/pcl/blob/master/CONTRIBUTING.md).
-
-Issues
-------
-To report issues, please read [CONTRIBUTING.md#bug-reports](https://github.com/PointCloudLibrary/pcl/blob/master/CONTRIBUTING.md#bug-reports).
-
-For general questions on how to use the PCL, please consider one of the following alternatives instead:
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/point-cloud-library)
-for Q&A as well as support for troubleshooting, installation and debugging. Do
-remember to tag your questions with the tag `point-cloud-library`.
-* [Discord Server](https://discord.gg/JFFMAXS) for live chat with
-other members of the PCL community and casual discussions
-
-Citation
---------
-We encourage other researchers to cite PCL if they use PCL or its components for their work or baselines. The bibtex entry for the same is
-```
-@InProceedings{Rusu_ICRA2011_PCL,
+<h2 tabindex="-1" dir="auto"><a id="user-content-description" class="anchor" aria-hidden="true" tabindex="-1" href="#description"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">描述</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">点云库 (PCL) 是一个独立的、大规模的、开放的项目，用于 2D/3D 图像和点云处理。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PCL 是根据 BSD 许可证条款发布的，因此可以免费用于商业和研究用途。</font><font style="vertical-align: inherit;">我们得到商业公司财团的财政支持，并拥有自己的非营利组织 Open Perception。</font><font style="vertical-align: inherit;">我们还要感谢一直在帮助该项目的个人捐助者和贡献者。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-compiling" class="anchor" aria-hidden="true" tabindex="-1" href="#compiling"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编译</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参考平台具体教程：</font></font></p>
+<ul dir="auto">
+<li><a href="https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_posix.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linux</font></font></a></li>
+<li><a href="https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_macosx.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mac OS X</font></font></a></li>
+<li><a href="https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_windows.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微软Windows</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2>
+<ul dir="auto">
+<li><a href="https://pcl-tutorials.readthedocs.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教程</font></font></a></li>
+<li><a href="https://pointclouds.org/documentation/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PCL 中继文档</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请阅读</font></font><a href="https://github.com/PointCloudLibrary/pcl/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CONTRIBUTING.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-issues" class="anchor" aria-hidden="true" tabindex="-1" href="#issues"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">问题</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要报告问题，请阅读</font></font><a href="https://github.com/PointCloudLibrary/pcl/blob/master/CONTRIBUTING.md#bug-reports"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CONTRIBUTING.md#bug-reports</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于有关如何使用 PCL 的一般问题，请考虑以下替代方案之一：</font></font></p>
+<ul dir="auto">
+<li><a href="https://stackoverflow.com/questions/tagged/point-cloud-library" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stack Overflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+用于问答以及故障排除、安装和调试支持。</font><font style="vertical-align: inherit;">请记住用标签标记您的问题</font></font><code>point-cloud-library</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://discord.gg/JFFMAXS" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discord 服务器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于与 PCL 社区的其他成员进行实时聊天和随意讨论</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-citation" class="anchor" aria-hidden="true" tabindex="-1" href="#citation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引文</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果其他研究人员在其工作或基线中使用 PCL 或其组件，我们鼓励他们引用 PCL。</font><font style="vertical-align: inherit;">相同的 bibtex 条目是</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>@InProceedings{Rusu_ICRA2011_PCL,
   author    = {Radu Bogdan Rusu and Steve Cousins},
   title     = {{3D is here: Point Cloud Library (PCL)}},
   booktitle = {{IEEE International Conference on Robotics and Automation (ICRA)}},
@@ -115,4 +87,22 @@ We encourage other researchers to cite PCL if they use PCL or its components for
   address   = {Shanghai, China},
   publisher = {IEEE}
 }
-```
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@InProceedings{Rusu_ICRA2011_PCL,
+  author    = {Radu Bogdan Rusu and Steve Cousins},
+  title     = {{3D is here: Point Cloud Library (PCL)}},
+  booktitle = {{IEEE International Conference on Robotics and Automation (ICRA)}},
+  month     = {May 9-13},
+  year      = {2011},
+  address   = {Shanghai, China},
+  publisher = {IEEE}
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</article></div>
